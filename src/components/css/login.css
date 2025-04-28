@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*PC*/
+@media only screen and (min-width: 480px) {
+  #rootLogin {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 3.5fr 1fr;
+  }
+
+  #login-form {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+/*Celular*/
+@media only screen and (max-width: 480px) {
+  #rootLogin {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.7fr 1.5fr 0.7fr;
+  }
+  #login-form {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+#rootLogin {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  background: linear-gradient(
+        90deg,
+        var(--surface-a0) calc(50px - 2px),
+        transparent 1%
+      )
+      center / 50px 50px,
+    linear-gradient(var(--surface-a0) calc(50px - 2px), transparent 1%) center /
+      50px 50px,
+    var(--primary-a40);
+}
+
+#login-form {
+  background-color: var(--surface-a30);
+  border-radius: 22px;
+  min-width: 340px;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--surface-a40);
+}
+
+#form {
+  width: 90%;
+  height: 90%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  /* Align items at the top */
+  align-items: center;
+  /* Keep them centered horizontally */
+  gap: 10px;
+  /* Add a small gap between elements, you can adjust this value */
+}
+
+.botao {
+  width: 80%;
+  padding: 1.2vh 1.2vw; /* Vertical padding vh, horizontal vw */
+  font-size: 18px; /* Maintain px for readability */
+  font-weight: bold;
+  color: var(--primary-a40);
+  background-color: var(--surface-a30);
+  border: 1px solid var(--surface-a40);
+  border-radius: 1.5vh; /* Relative to viewport height */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 1vh; /* Vertical spacing */
+}
+
+.botao:hover {
+  color: var(--primary-a40);
+  transform: scale(1.05);
+}
+
+.botao:active {
+  transform: scale(0.95);
+  box-shadow: 0 0.25vh 0.5vh rgba(0, 0, 0, 0.2);
+}
+
+.input {
+  padding: 1.5vh 1.5vw; /* Balanced padding */
+  border: 1px solid var(--surface-a40); /* Thin border */
+  border-radius: 0.75vh; /* Consistent rounding */
+  font-size: 16px; /* Maintain px for text clarity */
+  transition: all 0.3s ease;
+  outline: none;
+  margin-bottom: 1vh; /* Vertical spacing */
+  background-color: var(--surface-a30);
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.input::placeholder {
+  color: white;
+}
