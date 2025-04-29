@@ -1,5 +1,5 @@
 export async function buscarAlunos(field, value) {
-  let url = `http://${import.meta.env.VITE_BACKENDURL}/api/aluno/check`;
+  let url = `https://${import.meta.env.VITE_BACKENDURL}/api/aluno/check`;
   let method = "POST";
   let body = JSON.stringify({
     field,
@@ -8,9 +8,9 @@ export async function buscarAlunos(field, value) {
 
   if (field === "pagamento") {
     if (value === "adimplente") {
-      url = `${import.meta.env.VITE_BACKENDURL}/api/aluno/adimplente`;
+      url = `https://${import.meta.env.VITE_BACKENDURL}/api/aluno/adimplente`;
     } else if (value === "inadimplente") {
-      url = `${import.meta.env.VITE_BACKENDURL}/api/aluno/inadimplente`;
+      url = `https://${import.meta.env.VITE_BACKENDURL}/api/aluno/inadimplente`;
     } else {
       throw new Error("Situação de pagamento inválida");
     }
@@ -33,7 +33,7 @@ export async function buscarAlunos(field, value) {
 
 export async function buscarTurmas() {
   const response = await fetch(
-    `http://${import.meta.env.VITE_BACKENDURL}/api/turmas`,
+    `https://${import.meta.env.VITE_BACKENDURL}/api/turmas`,
     { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
   );
   const data = await response.json();
@@ -44,7 +44,7 @@ export async function buscarTurmas() {
 export async function getNalunos() {
   try {
     const response = await fetch(
-      `http://${import.meta.env.VITE_BACKENDURL}/api/aluno/total`,
+      `https://${import.meta.env.VITE_BACKENDURL}/api/aluno/total`,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -85,14 +85,17 @@ export const handleGeneratePDF = async () => {
       },
     };
 
-    const response = await fetch(`${import.meta.env.VITE_BACKENDURL}/api/pdf`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${localStorage.getItem("token")}`,
-      },
-      body: JSON.stringify(pdfData),
-    });
+    const response = await fetch(
+      `https://${import.meta.env.VITE_BACKENDURL}/api/pdf`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+        body: JSON.stringify(pdfData),
+      }
+    );
     if (!response.ok) throw new Error("Failed to generate PDF");
 
     const blob = await response.blob();

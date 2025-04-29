@@ -59,7 +59,7 @@ export default function AlunoForm() {
     const fetchTurmas = async () => {
       try {
         const response = await fetch(
-          `http://${import.meta.env.VITE_BACKENDURL}/api/turmas`,
+          `https://${import.meta.env.VITE_BACKENDURL}/api/turmas`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -98,7 +98,7 @@ export default function AlunoForm() {
       }
 
       const response = await fetch(
-        `http://${import.meta.env.VITE_BACKENDURL}/api/aluno/insertimage`,
+        `https://${import.meta.env.VITE_BACKENDURL}/api/aluno/insertimage`,
         {
           method: "POST",
           headers: {
@@ -148,7 +148,7 @@ export default function AlunoForm() {
     try {
       // 1. Insert Endereço
       const enderecoResponse = await fetch(
-        `http://${import.meta.env.VITE_BACKENDURL}/api/insert`,
+        `https://${import.meta.env.VITE_BACKENDURL}/api/insert`,
         {
           ...requestOptions,
           body: JSON.stringify({
@@ -162,7 +162,7 @@ export default function AlunoForm() {
 
       // 2. Insert Aluno
       const alunoResponse = await fetch(
-        `http://${import.meta.env.VITE_BACKENDURL}/api/insert`,
+        `https://${import.meta.env.VITE_BACKENDURL}/api/insert`,
         {
           ...requestOptions,
           body: JSON.stringify({
@@ -176,7 +176,7 @@ export default function AlunoForm() {
 
       // 3. Insert Responsável
       const responsavelResponse = await fetch(
-        `http://${import.meta.env.VITE_BACKENDURL}/api/insert`,
+        `https://${import.meta.env.VITE_BACKENDURL}/api/insert`,
         {
           ...requestOptions,
           body: JSON.stringify({
@@ -190,7 +190,7 @@ export default function AlunoForm() {
 
       // 4. Insert Pagamento
       const pagamentoResponse = await fetch(
-        `http://${import.meta.env.VITE_BACKENDURL}/api/insert`,
+        `https://${import.meta.env.VITE_BACKENDURL}/api/insert`,
         {
           ...requestOptions,
           body: JSON.stringify({
