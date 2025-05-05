@@ -15,7 +15,7 @@ export default function PrivateRoute({ children }) {
       return;
     }
 
-    fetch(`https://${import.meta.env.VITE_BACKENDURL}/auth/verify`, {
+    fetch(`${import.meta.env.VITE_BACKENDURL}/auth/verify`, {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then((res) => setValid(res.ok))

@@ -1,5 +1,5 @@
 export async function buscarAlunos(field, value) {
-  let url = `https://${import.meta.env.VITE_BACKENDURL}/api/aluno/check`;
+  let url = `${import.meta.env.VITE_BACKENDURL}/api/aluno/check`;
   let method = "POST";
   let body = JSON.stringify({
     field,
@@ -8,9 +8,9 @@ export async function buscarAlunos(field, value) {
 
   if (field === "pagamento") {
     if (value === "adimplente") {
-      url = `https://${import.meta.env.VITE_BACKENDURL}/api/aluno/adimplente`;
+      url = `${import.meta.env.VITE_BACKENDURL}/api/aluno/adimplente`;
     } else if (value === "inadimplente") {
-      url = `https://${import.meta.env.VITE_BACKENDURL}/api/aluno/inadimplente`;
+      url = `${import.meta.env.VITE_BACKENDURL}/api/aluno/inadimplente`;
     } else {
       throw new Error("Situação de pagamento inválida");
     }
@@ -33,7 +33,7 @@ export async function buscarAlunos(field, value) {
 
 export async function buscarTurmas() {
   const response = await fetch(
-    `https://${import.meta.env.VITE_BACKENDURL}/api/turmas`,
+    `${import.meta.env.VITE_BACKENDURL}/api/turmas`,
     { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
   );
   const data = await response.json();
@@ -44,7 +44,7 @@ export async function buscarTurmas() {
 export async function getNalunos() {
   try {
     const response = await fetch(
-      `https://${import.meta.env.VITE_BACKENDURL}/api/aluno/total`,
+      `${import.meta.env.VITE_BACKENDURL}/api/aluno/total`,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -86,7 +86,7 @@ export const handleGeneratePDF = async () => {
     };
 
     const response = await fetch(
-      `https://${import.meta.env.VITE_BACKENDURL}/api/pdf`,
+      `${import.meta.env.VITE_BACKENDURL}/api/pdf`,
       {
         method: "POST",
         headers: {
