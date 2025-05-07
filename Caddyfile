@@ -10,7 +10,7 @@
   }
 }
 
-:{env.PORT} {
+:{$PORT:23446} {
   handle_path /health {
     respond "OK" 200
   }
