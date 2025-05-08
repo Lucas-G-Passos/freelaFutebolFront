@@ -53,6 +53,7 @@ export default function AlunoForm() {
     data_vencimento: "",
     valor_mensalidade: "",
     valor_uniforme: "",
+    tipo: "",
   });
 
   useEffect(() => {
@@ -200,6 +201,7 @@ export default function AlunoForm() {
               responsavel_id: responsavelResult.id,
               status: "pendente",
               juros: 0.0,
+              tipo: pagamento.tipo,
             },
           }),
         }
@@ -760,6 +762,25 @@ export default function AlunoForm() {
                 setPagamento({ ...pagamento, valor_uniforme: e.target.value })
               }
             />
+          </label>
+
+          <label>
+            <div className="label-text-container">
+              Tipo<span className="required-asterisk">*</span>
+            </div>
+            <select
+              required
+              value={pagamento.tipo}
+              onChange={(e) =>
+                setPagamento({ ...pagamento, tipo: e.target.value })
+              }
+            >
+              <option value="">Selecione</option>
+              <option value="Pix">Pix</option>
+              <option value="Débito">Débito</option>
+              <option value="Crédito">Crédito</option>
+              <option value="Dinheiro">Dinheiro</option>
+            </select>
           </label>
         </div>
 

@@ -85,17 +85,14 @@ export const handleGeneratePDF = async () => {
       },
     };
 
-    const response = await fetch(
-      `${import.meta.env.VITE_BACKENDURL}/api/pdf`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-        body: JSON.stringify(pdfData),
-      }
-    );
+    const response = await fetch(`${import.meta.env.VITE_BACKENDURL}/api/pdf`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+      body: JSON.stringify(pdfData),
+    });
     if (!response.ok) throw new Error("Failed to generate PDF");
 
     const blob = await response.blob();
