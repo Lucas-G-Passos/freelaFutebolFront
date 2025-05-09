@@ -54,6 +54,9 @@
   #logout-mobile {
     display: flex;
   }
+  .logo{
+    display: none;
+  }
 }
 
 /* ============== PÁGINA ALUNO RESPONSIVA ============== */

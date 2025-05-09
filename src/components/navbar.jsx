@@ -1,11 +1,7 @@
 import "./css/navbar.css";
 import { Outlet, NavLink, useNavigate } from "react-router-dom";
 import PeopleIcon from "@mui/icons-material/People";
-import EngineeringIcon from "@mui/icons-material/Engineering";
 import LogoutIcon from "@mui/icons-material/Logout";
-import DashboardIcon from "@mui/icons-material/Dashboard";
-import ApartmentIcon from "@mui/icons-material/Apartment";
-import GroupsIcon from "@mui/icons-material/Groups";
 import CreateIcon from "@mui/icons-material/Create";
 
 export default function Navbar() {
@@ -15,12 +11,8 @@ export default function Navbar() {
     <div style={{ display: "flex", height: "100vh" }}>
       <div id="navbar">
         <div id="top-button-cont">
-          {/* <NavLink to={'/dashboard'} className='navlink'>
-                        <div className='navbutton'>
-                            <DashboardIcon />
-                            Dashboard
-                        </div>
-                    </NavLink> */}
+          <img src="escudo.svg" className="logo" />
+
           <NavLink to={"/aluno"} className="navlink">
             <div className="navbutton">
               <PeopleIcon />
@@ -33,28 +25,8 @@ export default function Navbar() {
               Cadastrar
             </div>
           </NavLink>
-          {/* <NavLink to={'/funcionario'} className='navlink'>
-                        <div className='navbutton'>
-                            <EngineeringIcon />
-                            Funcionario
-                        </div>
-                    </NavLink> */}
-          {/* <NavLink to={'/turmas'} className='navlink'>
-                        <div className='navbutton'>
-                            <GroupsIcon />
-                            Turmas
-                        </div>
-                    </NavLink>
-                    <NavLink to={'/filiais'} className='navlink'>
-                        <div className='navbutton'>
-                            <ApartmentIcon />
-                            Filiais
-                        </div>
-                    </NavLink> */}
-        </div>
-
-        <div id="bottom-button-cont">
           <a
+            id="logout-mobile"
             className="navlink"
             onClick={(e) => {
               e.preventDefault();

@@ -42,6 +42,11 @@
   text-decoration: none;
 }
 
+.logo{
+  width: 100%;
+  height: 70px;
+}
+
 /* Navigation button style */
 .navbutton {
   width: 100%;
