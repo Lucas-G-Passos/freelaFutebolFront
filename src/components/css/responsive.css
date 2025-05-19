@@ -68,7 +68,7 @@
   }
 
   .alunoCount {
-    font-size: 1.2em;
+    font-size: .8em;
     text-align: center;
     margin: 15px 0;
     padding: 10px;
@@ -122,7 +122,7 @@
 
   #results {
     overflow: auto;
-    font-size: .9em;
+    font-size: .7em;
     padding: 15px;
     padding-bottom: 60px;
     margin-top: 15px;
@@ -139,6 +139,7 @@
   .fotoAluno {
     margin-bottom: 10px;
   }
+  
 }
 
 /* ============== FORMULÁRIO RESPONSIVO ============== */
