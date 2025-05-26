@@ -1,14 +1,16 @@
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/login";
-import Dashboard from "./components/dashboard";
 import PrivateRoute from "./components/privateRoute";
 import Navbar from "./components/navbar";
 import Aluno from "./components/aluno/aluno";
 import "./components/css/variables.css";
 import "./components/css/responsive.css";
 import AlunoForm from "./components/aluno/alunoForm";
-
+import Funcionario from "./components/funcionario/funcionario";
+import FuncionarioForm from "./components/funcionario/funcionarioForm";
+import React from "react";
+import DragView from "./components/view/view";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -18,6 +20,9 @@ createRoot(document.getElementById("root")).render(
         <Route element={<Navbar />}>
           <Route path="/aluno" element={<Aluno />} />
           <Route path="/aluno/Form" element={<AlunoForm />} />
+          <Route path="/funcionario" element={<Funcionario />} />
+          <Route path="/funcionario/Form" element={<FuncionarioForm />} />
+          <Route path="/view" element={<DragView />} />
         </Route>
       </Route>
     </Routes>

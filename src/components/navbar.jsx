@@ -2,6 +2,7 @@ import "./css/navbar.css";
 import { Outlet, NavLink, useNavigate } from "react-router-dom";
 import PeopleIcon from "@mui/icons-material/People";
 import LogoutIcon from "@mui/icons-material/Logout";
+import React from "react";
 import CreateIcon from "@mui/icons-material/Create";
 
 export default function Navbar() {
@@ -12,7 +13,6 @@ export default function Navbar() {
       <div id="navbar">
         <div id="top-button-cont">
           <img src="escudo.svg" className="logo" />
-
           <NavLink to={"/aluno"} className="navlink">
             <div className="navbutton">
               <PeopleIcon />
