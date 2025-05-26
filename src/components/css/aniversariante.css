@@ -6,7 +6,7 @@
   padding: 30px;
   color: var(--light-a0);
   font-family: "Space Grotesk", sans-serif;
-  font-size: 1.8em;
+  font-size: 1.2em;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -15,7 +15,7 @@
 }
 
 .rootAniversariantes h3.liTitle {
-  font-size: 2.5em;
+  font-size: 1.5em;
   font-weight: bold;
   color: var(--primary-a30);
   margin-bottom: 10px;
@@ -68,7 +68,7 @@
 /* Garanta que os cards tenham mesma aparência */
 .niver-details-card .aluno-card,
 #results .aluno-card {
-  font-size: 1.8em !important;
+  font-size: 1.7em !important;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
