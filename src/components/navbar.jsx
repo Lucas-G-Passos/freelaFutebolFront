@@ -12,7 +12,7 @@ export default function Navbar() {
     <div style={{ display: "flex", height: "100vh" }}>
       <div id="navbar">
         <div id="top-button-cont">
-          <img src="escudo.svg" className="logo" />
+          <img src="/escudo.svg" className="logo" />
           <NavLink to={"/aluno"} className="navlink">
             <div className="navbutton">
               <PeopleIcon />
