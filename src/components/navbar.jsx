@@ -31,6 +31,12 @@ export default function Navbar() {
               Cadastrar Aluno
             </div>
           </NavLink>
+          <NavLink to={"/funcionario/form"} className="navlink">
+            <div className="navbutton">
+              <CreateIcon />
+              Cadastrar Func.
+            </div>
+          </NavLink>
           <a
             id="logout-mobile"
             className="navlink"

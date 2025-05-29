@@ -57,7 +57,6 @@
 }
 
 #form {
-  width: 90%;
   height: 90%;
   flex-direction: column;
   display: flex;
@@ -67,6 +66,8 @@
   /* Keep them centered horizontally */
   gap: 10px;
   /* Add a small gap between elements, you can adjust this value */
+  width: 100%; /* Take full width of parent */
+  align-items: center; /* Center children horizontally */
 }
 
 .botao {
@@ -104,17 +105,20 @@
   background-color: var(--surface-a30);
   color: white;
   transition: all 0.2s ease;
+  width: 80%;
 }
 
 .input::placeholder {
   color: white;
 }
-
+.loginImg {
+  width: 30%;
+}
 @media (max-width: 768px) {
-  .input{
+  .input {
     width: 80%;
   }
-  .rootLogin{
+  .rootLogin {
     overflow: hidden;
   }
 }

@@ -65,7 +65,7 @@
   }
 
   .alunoCount {
-    font-size: .8em;
+    font-size: 1.2em;
     text-align: center;
     margin: 15px 0;
     padding: 10px;
@@ -259,7 +259,7 @@
   }
 
   #results h3 {
-    font-size: .8em;
+    font-size: 1.5em;
   }
 }
 
