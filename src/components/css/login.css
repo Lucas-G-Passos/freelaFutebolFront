@@ -23,6 +23,7 @@
   #rootLogin {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 0.7fr 1.5fr 0.7fr;
+    overflow: hidden;
   }
   #login-form {
     grid-column: 2;
@@ -43,6 +44,7 @@
     linear-gradient(var(--surface-a0) calc(50px - 2px), transparent 1%) center /
       50px 50px,
     var(--primary-a40);
+    overflow: hidden;
 }
 
 #login-form {
