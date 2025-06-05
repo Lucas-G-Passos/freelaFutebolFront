@@ -12,6 +12,8 @@ import FuncionarioForm from "./components/funcionario/funcionarioForm";
 import React from "react";
 import DragView from "./components/view/view";
 
+//REact
+
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Routes>
