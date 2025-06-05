@@ -31,14 +31,6 @@ export default function AlunoSearchInput({
         <option value="inadimplente">Inadimplente</option>
       </select>
     );
-  } else if (searchField === "data_matricula") {
-    return(
-      <input
-      type="date"
-      onChange={(e) => setSearchValue(e.target.value)}
-      >
-      </input>
-    )
   } else {
     return (
       <input
