@@ -6,7 +6,7 @@
 }
 
 #rootDashboard {
-  --dot-bg: var(--surface-a0);
+  /* --dot-bg: var(--surface-a0);
   --dot-color: var(--primary-a40);
   --dot-size: 2px;
   --dot-space: 50px;
@@ -22,7 +22,7 @@
       )
       center / var(--dot-space) var(--dot-space),
     var(--dot-color);
-  color: var(--light-a0);
+  color: var(--light-a0); */
 
   display: grid;
   height: 100vh;
