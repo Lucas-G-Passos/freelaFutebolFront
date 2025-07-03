@@ -11,7 +11,7 @@ import InsertForm from "./form";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import DraggableFolder from "./dragFolder";
 import FolderIcon from "@mui/icons-material/Folder";
-import TurmaCard from "./turmaCard";
+import TurmaCard from "./turmaCard.jsx";
 
 export default function DragView() {
   const [filial, setFilial] = useState([]);

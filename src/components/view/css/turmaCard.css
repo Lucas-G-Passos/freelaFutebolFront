@@ -19,6 +19,7 @@
   padding: 10px;
 }
 .turmaCard {
+  user-select: none;
   display: flex;
   justify-content: space-between;
   background-color: var(--surface-a10);
@@ -71,11 +72,91 @@
   color: white;
   border: 2px solid white;
 }
-.closeButton{
+.closeButton {
   position: fixed;
   top: 0;
   right: 0;
   margin: 10px;
   border-radius: 16px;
   cursor: pointer;
+}
+.turmaDetailRoot {
+  width: 50%;
+  min-height: 50vh;
+  background-color: var(--surface-a0);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  border: var(--surface-a10) solid 1px;
+  box-shadow: 0px 0px 44px 19px rgba(0,0,0,0.56);
+}
+.turmaDetailRoot {
+  width: 60%;
+  max-width: 800px;
+  background-color: var(--surface-a0);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 12px;
+  border: 1px solid var(--surface-a20);
+  box-shadow: 0px 0px 44px 19px rgba(0, 0, 0, 0.56);
+  padding: 20px;
+  color: white;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.turmaDetailRoot h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: var(--text-title, white);
+  border-bottom: 1px solid var(--surface-a20);
+  padding-bottom: 5px;
+}
+
+.turmaDetailItem {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--surface-a10);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.turmaDetailItem label {
+  font-weight: bold;
+  margin-right: 10px;
+  color: var(--text-label, #ccc);
+}
+
+.turmaDetailItem span {
+  color: var(--text-value, white);
+  word-break: break-word;
+}
+
+.turmaDetailClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.turmaDetailClose.toSide{
+  top: 10px;
+  right: 40px;
+}
+
+.turmaDetailRoot.hidden {
+  display: none;
+}
+
+.turmaDetailRoot.visible {
+  display: flex;
 }
