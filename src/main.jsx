@@ -26,7 +26,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="/funcionario/Form" element={<FuncionarioForm />} />
           <Route path="/view" element={<DragView />} />
           <Route path="/imports" element={<ImportsExports />} />
-          <Route path="/usuarios" element={<CreateUsuario />} />
+          <Route path="/usuario" element={<CreateUsuario />} />
         </Route>
       </Route>
     </Routes>
