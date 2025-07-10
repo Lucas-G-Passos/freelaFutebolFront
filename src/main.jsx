@@ -32,3 +32,16 @@ createRoot(document.getElementById("root")).render(
     </Routes>
   </BrowserRouter>
 );
+
+// Add a global fetch wrapper to handle 403 errors
+const originalFetch = window.fetch;
+window.fetch = async (...args) => {
+  const response = await originalFetch(...args);
+  if (response.status === 403) {
+    alert(
+      "Você não tem permissão para realizar esta ação. Entre em contato com o administrador."
+    );
+    return Promise.reject(new Error("403 Forbidden"));
+  }
+  return response;
+};
