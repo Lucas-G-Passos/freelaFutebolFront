@@ -59,8 +59,7 @@ export default function DetailsCard({ aluno, onClose, onUpdate }) {
         id_turma: aluno.id_turma ?? aluno.turma_id ?? null,
         data_nascimento: aluno.data_nascimento ?? null,
         data_matricula: aluno.data_matricula ?? null,
-        nome_responsavel:
-          aluno.responsavel_nome ?? aluno.nome_responsavel ?? null,
+        nome_responsavel: aluno.responsavel_nome ?? aluno.nome_responsavel ?? null,
         nome_completo: aluno.nome_completo ?? "",
         telefone1: aluno.telefone1 ?? "",
         telefone2: aluno.telefone2 ?? "",

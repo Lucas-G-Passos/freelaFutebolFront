@@ -45,6 +45,13 @@ export default function Aluno() {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    async function logResults() {
+      console.log("Resultados da pesquisa:", results);
+    }
+    logResults();
+  }, [results]);
+
   return (
     <div id="alunoRoot">
       <div id="inputField">

@@ -2,8 +2,8 @@
 
 #alunoFormRoot {
   --dot-bg: var(--surface-a0);
-  /* --dot-color: var(--primary-a40);
-  --dot-size: 2px;
+  --dot-color: var(--primary-a40);
+  --dot-size: 0px;
   --dot-space: 50px;
   background: linear-gradient(
         90deg,
@@ -16,7 +16,7 @@
         transparent 1%
       )
       center / var(--dot-space) var(--dot-space),
-    var(--dot-color); */
+    var(--dot-color);
   font-family: "Space Grotesk";
   display: inline-flex;
   justify-content: center;
